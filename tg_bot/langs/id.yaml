@@ -1,0 +1,115 @@
+# Language name in their native
+language: "Bahasa Indonesia 🇮🇩"
+# name of people(s) who worked on this translation
+authors: "Dev @dank_as_fuck\nPenerjemah @apaloeliat"
+# languages
+curr_chat_lang: "Halo, Bahasa kamu saat ini {}, pilih salah satu bahasa yang ingin kamu gunakan dengan tombol dibawah ini :)"
+set_chat_lang: "Mantap, Sekarang kamu pakai {}!"
+pm_start_text: |
+  Halo {}, Namaku {}!
+  Aku adalah waifu bot untuk mengatur grup dengan fitur-fitur yang mantul ;)
+  
+  Kamu bisa lihat menu perintah dengan /help
+grp_start_text: "Hai, Aku Makima."
+pm_help_text: |
+  Hai kak! Namaku *Makima*. Anggota dari *Devils Hunter Union*.
+  Aku adalah bot untuk membantu grup dengan fitur-fitur yang mantul! Silahkan lihat-lihat dulu.
+  Menu perintah *utama* yang tersedia:
+   • /start: Untuk bangunkan aku. Untuk mengecek aku hidup atau modar.
+   • /help: Untuk menampilkan menu.
+   • /language: Untuk mengganti bahasa.
+   • /settings:
+     - dalam PC: mengirim semua pengaturan.
+     - dalam grup: akan mengirim pesan ke private, dengan semua pengaturan.
+   Klik tombol dibawah untuk mengetahui lebih lanjut tentang semua fitur!
+add_bot_to_group_btn: "Tambah Makima ke dalam grup kamu"
+support_chat_link_btn: "Chat Bantuan // Devils Hunter Union"
+updates_channel_link_btn: "Channel Makima Official"
+src_btn: "Source code (Berlisensi GPLv3)"
+admin_help: |
+  • `/admins`*:* Tampilkan semua admin di dalam chat
+  
+  *Hanya admin:*
+  • balas pesan dengan `/pin`*:* pin pesan secara diam-diam - tambah `'loud'` atau `'notify'` untuk memberitahukan para member.
+  • `/unpin`*:* unpin pesan yang di tuju
+  • `/invitelink`*:* membuat invitelink
+  • `/promote`*:* membuat member menjadi admin
+  • `/demote`*:* membuat admin menjadi member
+  • `/title <title here>`*:* kasih nama admin yang terpilih
+afk_help: |
+  - /afk <alasan>: kasih tau kalau kamu sedang AFK(away from keyboard).
+  - brb <alasan>: sama kek AFK.
+  Pas lu AFK, jika ada yg nge tag bakalan di kasih tau kalo lu AFK
+anilist_help: |
+  *AniList*
+  Dapatkan informasi tentang anime, manga atau karakter dengan fitur ini! Data diambil dari [AniList](anilist.co).
+  *Perintah tersedia:*
+   - /anime <judul anime>: Info anime.
+   - /character <nama karakter>: Info karakter.
+   - /manga <judul manga>: Info manga.
+antiflood_help: |
+  Antiflood adalah pencegahan terhadap member untuk mengirim pesan lebih dari X dalam satu waktu. Jika aktif \
+  Akan memberi hukuman pada member tersebut.
+   Perintah ini akan membisukan user jika mengirim pesan 10 kali dalam waktu yang singkat, kecuali bot.
+   • `/flood`*:* Info flood control
+  • *Hanya admin:*
+   • `/setflood <int/'no'/'off'>`*:* mengaktifkan atau menonaktifkan antiflood
+   *Contoh:* `/setflood 10`
+   • `/setfloodmode <ban/kick/mute/tban/tmute> <value>`*:* memilih hukuman jika user nge flood. ban/kick/mute/tmute/tban
+  • *Catatan:*
+   • Tambahkan di <value> jika pilih tban dan tmute!!
+   Contoh:
+   `5m` = 5 menit
+   `6h` = 6 jam
+   `3d` = 3 hari
+   `1w` = 1 minggu
+approve_help: |
+  
+backup_help: |
+  backup_help
+bans_help: |
+  bans_help
+blacklist_help: |
+  blacklist_help
+cleaner_help: |
+  cleaner_help
+connections_help: |
+  koneksi_bantuan
+cust_filters_help: |
+  cust_filters_help
+disable_help: |
+  disable_help
+feds_help: |
+  feds_help
+fun_help: |
+  fun_help
+antispam_help: |
+  antispam_help
+gtranslate_help: |
+  gtranslate_help
+locks_help: |
+  locks_help
+log_help: |
+  log_help
+markdown_help_text: |
+  markdown_help_text
+misc_help: |
+  misc_help
+muting_help: |
+  muting_help
+notes_help: |
+  notes_help
+purge_help: |
+  purge_help
+reports_help: |
+  report_help
+rules_help: |
+  rules_help
+userinfo_help: |
+  userinfo_help
+warns_help: |
+  warns_help
+greetings_help: |
+  greetings_help
+nation_help: |
+  nation_help

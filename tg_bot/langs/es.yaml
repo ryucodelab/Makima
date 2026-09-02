@@ -1,0 +1,358 @@
+# Language name in their native
+language: "Español 🇪🇦"
+# name of people(s) who worked on this translation
+authors: "@EliasMoreno @SkayerSaires"
+# languages
+curr_chat_lang: "Hey! Tu idioma actual es {}, selecciona el que quieras de los siguientes :)"
+set_chat_lang: "Yeah, {} está ahora activo!"
+pm_start_text: |
+  Hola {}, mi nombre es {}.
+  Soy un bot para gestionar grupos con cosas divertidas.
+  
+  Puedes encontrar una lista con los comandos disponibles escribiendo /help
+grp_start_text: "Hola, soy Makima."
+pm_help_text: |
+  Que pasa! Me llamo *Makima*. Soy un bot para gestionar grupos con extras divertidos! Estos comandos principales te ayudarán a iniciar el bot.
+  • /help: Te envía este mensaje.
+  • /language: Cambia el idioma del bot.
+  • /settings:
+   - por PM: Te enviara tus configuraciones con todos los comandos disponibles.
+   - en el grupo: Te enviará por PM la configuración del grupo.
+  
+  Click en los botones que hay a continuación para obtener documentación acerca de los módulos.
+add_bot_to_group_btn: "Añade Makima a tu grupo"
+support_chat_link_btn: "Chat de soporte"
+updates_channel_link_btn: "Canal de actualizaciones de Kgyo"
+src_btn: "Código fuente (Licensed under GPLv3)"
+admin_help: |
+  • /admins: lista de administradores del canal.
+  
+  *Sólo administradores:"
+  
+  /pin: fija de forma silenciosa el mensaje respondido.
+  /unpin: quita el mensaje actual fijado.
+  /invitelink: obtiene el mensaje de invitación. /promote: promociona al usuario que respondas.
+  /demote: quita de administrador al usuario que respondas.
+  /tittle <título aquí>: selecciona un titulo personalizado para un administrador que el ha promocionado.
+afk_help: |
+  /afk <motivo>: márcate a ti mismo en estado de AFK (ausente). 
+  Cuando estás AFK, cualquier mención será respondida con un mensaje que dirá que no estás disponible.
+anilist_help: |
+  *Anilist*
+  Obtén información acerca de anime, manga o personajes con este módulo. Todos los datos son obtenidos de anilist.co.
+  *Comandos disponibles
+  - /anime <anime>: información acerca de un anime.
+  - /carácter <personaje>: información acerca de un personaje.
+  - /manga <manga>: información acerca de un manga.
+antiflood_help: |
+  Antiflood le permite tomar medidas sobre los usuarios que envían más de x mensajes seguidos.  Superando la inundación establecida \
+   resultará en la restricción de ese usuario.
+    Esto silenciará a los usuarios si envían más de 10 mensajes seguidos, los bots se ignoran.
+    • `/flood` *: * Obtiene la configuración actual de control de inundaciones
+   • * Solo administradores: *
+    • `/setflood <int / 'no' / 'off'>` *: * habilita o deshabilita el control de inundaciones
+    * Ejemplo: * `/ setflood 10`
+    • `/setfloodmode <ban / kick / mute / tban / tmute> <valor>` *: * Acción a realizar cuando el usuario ha excedido el límite de inundación.  ban / kick / mute / tmute / tban
+   • *Nota:*
+    • ¡Se debe completar el valor para tban y tmute !!
+    Puede ser:
+    `5m` = 5 minutos
+    `6h` = 6 horas
+    `3d` = 3 días
+    `1w` = 1 semana
+approve_help: |
+  A veces, puede confiar en que un usuario no enviará contenido no deseado.
+   Tal vez no sea suficiente para convertirlos en administradores, pero es posible que esté de acuerdo con que los bloqueos, las listas negras y el antiflood no se apliquen a ellos.
+   Para eso están las aprobaciones: aprobar a usuarios confiables para permitirles enviar
+   * Comandos de administrador: *
+   • `/approval` *: * Verifica el estado de aprobación de un usuario en el chat actual.
+   • `/approve` *: * Aprobar un usuario.  Las cerraduras, las listas negras y el antiinundación ya no se aplicarán a ellos.
+   • `/unapprove` *: * No aprobar a un usuario.  Ahora estarán sujetos a bloqueos, listas negras y antiinundación nuevamente.
+   • `/approved` *: * Lista todos los usuarios aprobados.
+   • `/unapproveall` *: * Desaprobar * TODOS * los usuarios en un chat.  Esto no se puede deshacer.
+backup_help: |
+  * Solo administrador: *
+    - /import: responda a un archivo de respaldo de mayordomo de grupo para importar tanto como sea posible, ¡haciendo que la transferencia sea súper simple!  Nota \
+      que los archivos / fotos no se pueden importar debido a restricciones de Telegram.
+    - /exportar: !!!  Este no es un comando todavía, ¡pero debería estar disponible pronto!
+bans_help: |
+  - /kickme: patea al usuario que emitió el comando.
+  
+    * Solo administrador: *
+   - /ban <userhandle>: banea a un usuario.  (a través del identificador o respuesta)
+   - /tban <userhandle> x (m / h / d): banea a un usuario por x tiempo.  (a través del identificador o respuesta).  m = minutos, h = horas, d = días.
+   - /unban <userhandle>: desbloquea a un usuario.  (a través del identificador o respuesta)
+   - /kick <userhandle>: expulsar a un usuario del grupo, (a través del identificador o respuesta)
+blacklist_help: |
+  Las listas negras se utilizan para evitar que ciertos factores desencadenantes se digan en un grupo.  Cada vez que se menciona el desencadenante, el mensaje se eliminará de inmediato.  ¡Una buena combinación es a veces combinar esto con filtros de advertencia!
+  
+   * NOTA *: Las listas negras no afectan a los administradores de grupo.
+  
+    • `/blacklist` *: * Ver las palabras actuales de la lista negra.
+  
+   Solo administrador:
+    • `/addblacklist <triggers>` *: * Agrega un disparador a la lista negra.  Cada línea se considera un disparador, por lo que el uso de diferentes líneas le permitirá agregar varios disparadores.
+    • `/unblacklist <triggers>` *: * Elimina los disparadores de la lista negra.  Aquí se aplica la misma lógica de nueva línea, por lo que puede eliminar varios activadores a la vez.
+    • `/blacklistmode <off / del / warn / ban / kick / mute / tban / tmute>` *: * Acción a realizar cuando alguien envía palabras en la lista negra.
+cleaner_help: |
+  - /cleanbluetext <on / off / yes / no> - limpiar comandos después de enviar
+   - /ignorecleanbluetext <word> - evita la limpieza automática del comando
+   - /unignorecleanbluetext <word> - eliminar evita la limpieza automática del comando
+   - /listcleanbluetext - enumera los comandos actualmente incluidos en la lista blanca
+connections_help: |
+  - /connect: conecta un chat (se puede hacer en un grupo por / connect o / connect <chat id> en PM)
+   - /connection: lista de chats conectados
+   - /disconnect: ​​desconectarse de un chat
+   - /helpconnect: enumera los comandos disponibles que se pueden hacer de forma remota
+  
+    * Solo administrador: *
+   - /allowconnect <sí / no>: permite que un usuario se conecte a un chat
+cust_filters_help: |
+  • `/filters` *: * Lista todos los filtros activos guardados en el chat.
+  
+    * Solo administrador: *
+   • `/filter <palabra clave> <mensaje de respuesta>` *: * Agrega un filtro a este chat.  El bot ahora responderá ese mensaje siempre que sea 'palabra clave'
+     es mencionado.  Si responde a una calcomanía con una palabra clave, el bot responderá con esa calcomanía.  NOTA: todas las palabras clave están en minúsculas.  Si desea que su palabra clave sea una oración, use comillas.  p. ej.: /filter "hola" ¿Qué estás haciendo?
+     
+   • `/stop <palabra clave de filtro>` *: * Detiene ese filtro.
+  
+    * Solo creador de chat: *
+   • `/removeallfilters` *: * Elimina todos los filtros de chat a la vez.
+  
+     * Nota *: Los filtros también admiten formatos como {first}, {last}, etc. y botones.
+       ¡Marque `/markdownhelp` para saber más!
+disable_help: |
+  No todo el mundo quiere todas las funciones que ofrece el bot.  Algunos comandos son los mejores
+   dejado sin usar;  para evitar el spam y el abuso.
+  
+   Esto le permite deshabilitar algunos comandos de uso común, para que nadie pueda usarlos.
+   También le permitirá eliminarlos automáticamente, lo que evitará que las personas realicen mensajes de texto azul.
+  
+    • /cmds: comprueba el estado actual de los comandos desactivados
+  
+    * Solo administrador: *
+    • /enable <cmd name>: habilita ese comando
+    • /disable <cmd name>: deshabilita ese comando
+    • /listcmds: enumera todos los posibles comandos inhabilitables
+feds_help: |
+  Todo es divertido, hasta que el spammer empieza a entrar en tu grupo y tienes que bloquearlo.  Entonces necesitas empezar a prohibir más y más, y duele.
+   Pero entonces tienes muchos grupos y no quieres que este spammer esté en uno de tus grupos, ¿cómo puedes lidiar?  ¿Tienes que bloquearlo manualmente, en todos tus grupos?
+  
+   ¡No más!  Con Federation, puede hacer que una prohibición en un chat se superponga con todos los demás chats.
+   Incluso puede designar federaciones de administradores, por lo que su administrador de confianza puede prohibir todos los chats que desea proteger.
+  
+   * Comandos disponibles *:
+  
+    • /newfed <fedname>: crea una nueva Federación con el nombre dado.  Los usuarios solo pueden tener una Federación.  Este método también se puede utilizar para cambiar el nombre de la Federación.  (máx.64 caracteres)
+    • /delfed: Elimina tu Federación y cualquier información relacionada con ella.  No cancelará usuarios bloqueados.
+    • /fedinfo <FedID>: Información sobre la Federación especificada.
+    • /joinfed <FedID>: Únase al chat actual de la Federación.  Solo los propietarios del chat pueden hacer esto.  Cada chat solo puede estar en una Federación.
+    • /leavefed <FedID>: Deja la Federación dada.  Solo los propietarios del chat pueden hacer esto.
+    • /fpromote <usuario>: Promociona a los usuarios para que proporcionen administración alimentada.  Solo propietario de la Fed.
+    • /fdemote <usuario>: quita el usuario de la federación administrativa a un usuario normal.  Solo propietario de la Fed.
+    • /fban <usuario>: prohíbe a los usuarios de todas las federaciones donde se lleva a cabo este chat, y los ejecutores tienen control sobre él.
+    • /unfban <usuario>: Cancelar Usuario de todas las federaciones donde se lleva a cabo este chat y sobre las que el ejecutor tiene control.
+    • /setfrules: Organiza las reglas de la Federación.
+    • /frules: Consulte el reglamento de la Federación.
+    • /chatfed: vea la Federación en el chat actual.
+    • /fedadmins: muestra el administrador de la Federación.
+    • /fbanlist: muestra todos los usuarios victimizados en la Federación en este momento.
+    • /fednotif <on / off>: La configuración de la federación no está en PM cuando hay usuarios que son fban / unban.
+    • /fedchats: Obtén todos los chats que están conectados en la Federación.
+    • /importfbans: responda al archivo de mensaje de copia de seguridad de la Federación para importar la lista prohibida a la Federación ahora.  (desactivado por ahora).
+fun_help: |
+  • /runs: responde una cadena aleatoria de una serie de respuestas.
+   • /pat: acaricia a una persona, algo genial para los lindos: 3
+   • /slap: abofetear a un usuario, o recibir una bofetada si no es una respuesta.
+   • /shrug: encogerse de hombros XD.
+   • /tablet: obtener voltear / desenrollar: v.
+   • /decide: responde aleatoriamente sí / no / tal vez
+   • /toss: lanza una moneda
+   • /roll: lanza un dado.
+   • /rlg: une orejas, nariz, boca y crea un emo; -;
+   • /shout <palabra clave>: escribe cualquier cosa que quieras gritar en voz alta.
+   • /stickerid: responde a una pegatina para obtener su ID.
+   • /getsticker: responde a una pegatina para obtener la imagen PNG sin formato.
+   • /steal: responde a una imagen o sticker para añadirla a tu colección.
+   • /stickers: buscar pegatinas en el buscador de pegatinas de combot..
+  
+antispam_help: |
+  * Solo administradores: *
+    • `/antispam <on / off / yes / no>` *: * Cambiará nuestra tecnología antispam o devolverá su configuración actual.
+  
+   Anti-Spam, utilizado por los desarrolladores de bots para prohibir a los spammers en todos los grupos.  Esto ayuda a proteger
+   usted y sus grupos eliminando los flooders de spam lo más rápido posible.
+   * Nota: * Los usuarios pueden apelar gbans o denunciar spammers en @BlueBloodUnion
+  
+   ¡Makima también integra la API de @Spamwatch para eliminar los spammers tanto como sea posible de su sala de chat!
+   * ¿Qué es SpamWatch? *
+   SpamWatch mantiene una gran lista de prohibiciones constantemente actualizada de spambots, trolls, spammers de bitcoin y personajes desagradables [.] (Https://telegra.ph/file/c1051d264a5b4146bd71e.jpg)
+   Ayude constantemente a expulsar a los spammers de su grupo automáticamente. Por lo tanto, no tendrá que preocuparse de que los spammers asalten su grupo.
+   * Nota: * Los usuarios pueden apelar las prohibiciones de spamwatch en @SpamwatchSupport
+gtranslate_help: |
+  • `/tr` o` / tl` (código de idioma) como respuesta a un mensaje largo.
+   * Ejemplo: * `/tr en` *: * traduce algo al inglés.
+       `/tr ja-en` *: * traduce del japonés al inglés.
+  
+   * Códigos de idioma disponibles: *
+   '
+   af, am, ar, az, be, bg, bn, bs, ca, ceb, co, cs, cy, da, de, el, en, eo, es,
+   et, eu, fa, fi, fr, fy, ga, gd, gl, gu, ha, haw, hola, hmn, hr, ht, hu, hy,
+   id, ig, es, eso, iw, ja, jw, ka, kk, km, kn, ko, ku, ky, la, lb, lo, lt, lv, mg, mi, mk,
+   ml, mn, señor, señora, mt, mi, ne, nl, no, nueva york, pa, pl, ps, pt, ro, ru, sd, si, sk, sl,
+   sm, sn, entonces, sq, sr, st, su, sv, sw, ta, te, tg, th, tl, tr, reino unido, ur, uz,
+   vi, xh, yi, yo, zh, zh_CN, zh_TW, zu
+   '
+locks_help: |
+  ¿Te molestan las pegatinas?  ¿O quieres evitar que la gente comparta enlaces?  o fotos?
+   ¡Estás en el lugar indicado!
+   El módulo de cerraduras le permite bloquear algunos elementos comunes en el
+   mundo de telegramas;  ¡el bot los eliminará automáticamente!
+  
+    • `/locktypes` *: * Lista todos los tipos de bloqueo posibles
+  
+   * Solo administradores: *
+    • `/lock <type>` *: * Bloquear elementos de un tipo determinado (no disponible en privado)
+    • `/unlock <type>` *: * Desbloquea elementos de cierto tipo (no disponible en privado)
+    • `/locks` *: * La lista actual de bloqueos en este chat.
+  
+   Los candados se pueden utilizar para restringir los usuarios de un grupo.
+   p.ej:
+   El bloqueo de URL eliminará automáticamente todos los mensajes con URL, el bloqueo de pegatinas restringirá todos
+   que los usuarios no administradores envíen pegatinas, etc.
+   Bloquear bots evitará que los no administradores agreguen bots al chat.
+  
+   *Nota:*
+    • Desbloquear el permiso * info * permitirá a los miembros (no administradores) cambiar la información del grupo, como la descripción o el nombre del grupo
+    • El permiso de desbloqueo * pin * permitirá a los miembros (no administradores) anclar un mensaje en un grupo
+log_help: |
+  * Solo administradores: *
+   • `/logchannel` *: * obtener información del canal de registro
+   • `/setlog` *: * establece el canal de registro.
+   • `/unsetlog` *: * desarma el canal de registro.
+  
+   La configuración del canal de registro se realiza mediante:
+   • agregar el bot al canal deseado (¡como administrador!)
+   • enviando `/setlog` en el canal
+   • reenviar el `/setlog` al grupo
+markdown_help_text: |
+  Markdown es una herramienta de formato muy poderosa compatible con Telegram.  {dispatcher.bot.first_name} tiene algunas mejoras para asegurarse de que
+   los mensajes guardados se analizan correctamente y le permiten crear botones.
+  
+   - <code> _italic_ </code>: ajustar el texto con '_' producirá texto en cursiva
+   - <code> * bold * </code>: ajustar el texto con '*' producirá texto en negrita
+   - <code> `code` </code>: ajustar el texto con '`' producirá texto monoespaciado, también conocido como 'código'
+   - <code> [sometext] (someURL) </code>: esto creará un enlace - el mensaje solo mostrará <code> sometext </code>,
+   y al tocarlo se abrirá la página en <code> someURL </code>.
+   Por ejemplo: <code> [prueba] (example.com) </code>
+  
+   - <code> [buttontext] (buttonurl: someURL) </code>: esta es una mejora especial para permitir a los usuarios tener un telegrama
+   botones en su rebaja.  <code> buttontext </code> será lo que se muestra en el botón, y <code> someurl </code>
+   será la URL que se abre.
+   EG: <code> [Este es un botón] (buttonurl: example.com) </code>
+  
+   Si desea varios botones en la misma línea, use: mismo, como tal:
+   <código> [uno] (buttonurl: //example.com)
+   [dos] (buttonurl: //google.com: igual) </code>
+   Esto creará dos botones en una sola línea, en lugar de un botón por línea.
+  
+   Tenga en cuenta que su mensaje <b> DEBE </b> contener texto que no sea solo un botón.
+misc_help: |
+  • /id: obtiene la identificación del grupo actual.  Si se usa respondiendo a un mensaje, obtiene la identificación de ese usuario.
+   • /gifid: me responde a un gif para decirle su ID de archivo.
+   • /info: obtiene información sobre un usuario.
+   • /markdownhelp: resumen rápido de cómo funciona Markdown en Telegram; solo se puede llamar en chats privados.
+   • /ud <palabra>: escriba la palabra o expresión que desea utilizar para la búsqueda.
+   • /urban <word>: igual que / ud
+   • /paste: haz una pasta en `nekobin.com`
+   • /react: reacciona con una reacción aleatoria
+   • /weebify <text>: devuelve un texto weebify
+   • /tr (código de idioma) como respuesta a un mensaje largo.
+   • /time <consulta>: proporciona información sobre una zona horaria.
+   • /cash: conversor de divisas
+     ejemplo de sintaxis: / cash 1 USD INR
+   • /cinfo: obtiene información sobre un usuario o un chat (usa métodos @Pyrogram)
+   • /getid: obtiene ID de chat, usuario y mensaje de chat.
+muting_help: |
+  * Solo administradores: *
+    • `/mute <userhandle>` *: * silencia a un usuario.  También se puede utilizar como respuesta, silenciando la respuesta al usuario.
+    • `/tmute <userhandle> x (m / h / d)` *: * silencia a un usuario por x tiempo.  (a través del identificador o respuesta).  `m` =` minutos`, `h` =` horas`, `d` =` días`.
+    • `/unmute <userhandle>` *: * activa el sonido de un usuario.  También se puede utilizar como respuesta, silenciando la respuesta al usuario.
+notes_help: |
+  • `/get <notename>` *: * obtiene la nota con este notename. 
+   • `# <nombrenota>` *: * igual que / get
+   • `/notes` o` /Saved` *: * lista todas las notas guardadas en este chat
+   • `/number` *: * Extraerá la nota de ese número en la lista.
+    Si desea recuperar el contenido de una nota sin ningún formato, utilice `/ get <nombrenota> noformato`.  Esto puede
+    ser útil al actualizar una nota actual.
+  
+    * Solo administradores: *
+   • `/save <notename> <notedata>` *: * guarda los datos de la nota como una nota con el nombre notename
+    Se puede agregar un botón a una nota utilizando la sintaxis de enlace de rebajas estándar; el enlace debe ir precedido de un
+     `buttonurl:` sección, como tal: `[somelink] (buttonurl: example.com)`.  Consulte `/markdownhelp` para obtener más información.
+   • `/save <notename>` *: * guarda el mensaje respondido como una nota con el nombre notename
+   • `/clear <nombre>` *: * borrar nota con este nombre
+   • `/removeallnotes` *: * elimina todas las notas del grupo
+   * Nota: * Los nombres de las notas no distinguen entre mayúsculas y minúsculas y se convierten automáticamente a minúsculas antes de guardarse.
+purge_help: |
+  * Solo administrador: *
+    • /del: elimina el mensaje al que respondió
+    • /purge: elimina todos los mensajes entre este y el mensaje respondido.
+    • /purge <entero X>: elimina el mensaje respondido y los X mensajes que lo siguen si respondieron a un mensaje.
+reports_help: |
+  • / report <razon>` *: * responde a un mensaje para informar a los administradores.
+   • `@admin` *: * responde a un mensaje para informar a los administradores.
+    * NOTA: * Ninguno de estos se activará si lo utilizan los administradores.
+  
+    * Solo administradores: *
+     • `/reports <on / off>` *: * cambiar la configuración del informe o ver el estado actual.
+     • Si lo hace en la tarde, cambia su estado.
+     • Si está en grupo, cambia el estado de ese grupo.
+rules_help: |
+  • `/rules` *: * obtiene las reglas para este chat.
+    * Solo administradores: *
+   • `/setrules <sus reglas aquí>` *: * establece las reglas para este chat.
+   • `/clearrules` *: * borra las reglas para este chat.
+userinfo_help: |
+  - /setbio <text>: mientras responde, guardará la biografía de otro usuario
+   - / bio: obtendrá tu biografía o la de otro usuario.  Esto no lo puede configurar usted mismo.
+   - /setme <text>: establecerá su información
+   - /me: obtendrá tu información o la de otro usuario
+warns_help: |
+  • `/warns <userhandle>` *: * obtiene el número de usuario y el motivo de las advertencias.
+   • `/warnlist` *: * lista de todos los filtros de advertencia actuales
+  
+   * Solo administradores: *
+   • `/warn <userhandle>` *: * advierte a un usuario.  Después de 3 advertencias, el usuario será expulsado del grupo.  También se puede utilizar como respuesta.
+   • `/resetwarn <userhandle>` *: * restablece las advertencias para un usuario.  También se puede utilizar como respuesta.
+   • `/addwarn <palabra clave> <mensaje de respuesta>` *: * establece un filtro de advertencia en una determinada palabra clave.  Si desea que su palabra clave \
+   ser una oración, incluirla entre comillas, como tal: `/ addwarn" muy enojado "Este es un usuario enojado`.
+   • `/nowarn <palabra clave>` *: * detiene un filtro de advertencia
+   • `/warnlimit <num>` *: * establece el límite de advertencia
+   • `/strongwarn <on / yes / off / no>` *: * Si está activado, exceder el límite de advertencia resultará en una prohibición.  De lo contrario, solo pateará.
+greetings_help: |
+  * Solo administradores: *
+    • `/welcome <on / off>` *: * habilitar / deshabilitar los mensajes de bienvenida.
+    • `/welcome` *: * muestra la configuración de bienvenida actual.
+    • `/welcome noformat` *: * muestra la configuración de bienvenida actual, sin el formato - ¡útil para reciclar sus mensajes de bienvenida!
+    • `/goodbye` *: * el mismo uso y argumentos que` / welcome`.
+    • `/setwelcome <sometext>` *: * establece un mensaje de bienvenida personalizado.  Si se usa para responder a los medios, usa esos medios.
+    • `/setgoodbye <sometext>` *: * establece un mensaje de despedida personalizado.  Si se usa para responder a los medios, usa esos medios.
+    • `/resetwelcome` *: * restablece el mensaje de bienvenida predeterminado.
+    • `/resetgoodbye` *: * restablece el mensaje de despedida predeterminado.
+    • `/cleanwelcome <on / off>` *: * En un miembro nuevo, intente eliminar el mensaje de bienvenida anterior para evitar enviar spam al chat.
+    • `/welcomemutehelp` *: * brinda información sobre los mudos de bienvenida.
+    • `/cleanervice <on / off` *: * borra los mensajes de servicio de bienvenida / izquierda de los telegramas.
+    *Ejemplo:*
+   el usuario se unió al chat, el usuario abandonó el chat.
+  
+   * Rebaja de bienvenida: *
+    • `/welcomehelp` *: * ver más información de formato para mensajes personalizados de bienvenida / despedida.
+nation_help: |
+  - /eagle: enumera todos los miembros de Devils Hunter Union.
+   - /royals: enumera todas las naciones reales.
+   - /sakuras: enumera todas las naciones Sakura.
+   - /sardegnas: enumera todas las naciones Sardegnas.
+   - /neptunianos: enumera todas las naciones de Neptunia.
+   Nota: Estos comandos enumeran a los usuarios con privilegios especiales de bot y solo pueden ser utilizados por ellos.
+   Puede visitar @BlueBloodUnion para consultar más sobre estos.
